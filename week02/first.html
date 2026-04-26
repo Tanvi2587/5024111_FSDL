@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NSS Portfolio</title>
+
+<!-- ========== CSS3 INCLUSION (Internal CSS) ========== -->
+<style>
+
+    /* CSS SYNTAX
+       selector { property: value; } */
+
+    /* UNIVERSAL SELECTOR */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ELEMENT SELECTOR */
+    body {
+        font-family: Georgia, serif;   /* FONTS */
+        background-color: #e8f5e9;     /* BACKGROUND */
+        color: #1b5e20;                /* COLOR */
+        padding: 20px;
+    }
+
+    /* ID SELECTOR */
+    #title {
+        text-align: center;
+        font-size: 36px;
+        color: #2e7d32;
+        margin-bottom: 10px;
+    }
+
+    /* PSEUDO ELEMENT */
+    #title::after {
+        content: " (National Service Scheme)";
+        font-size: 18px;
+        color: #388e3c;
+    }
+
+    /* CLASS SELECTOR */
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        color: #1b5e20;
+        margin-top: 20px;
+    }
+
+    /* LISTS */
+    ul {
+        list-style-type: disc;
+        margin-left: 25px;
+    }
+
+    li {
+        padding: 6px;
+    }
+
+    /* PSEUDO CLASS */
+    li:hover {
+        color: #004d40;
+    }
+
+    /* TABLE */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #4caf50;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #a5d6a7;
+    }
+
+    /* PSEUDO CLASS */
+    tr:nth-child(even) {
+        background-color: #e8f5e9;
+    }
+
+    /* ATTRIBUTE SELECTOR */
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 8px;
+    }
+
+    /* BUTTON */
+    button {
+        background-color: #2e7d32;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        margin-top: 10px;
+    }
+
+    /* PSEUDO CLASS */
+    button:hover {
+        background-color: #1b5e20;
+        cursor: pointer;
+    }
+
+    /* PSEUDO ELEMENT */
+    p::first-letter {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1b5e20;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 id="title">NSS Portfolio</h1>
+    <p>NSS encourages students to actively participate in community service and nation building.</p>
+
+    <!-- LIST -->
+    <h2>Volunteer Details</h2>
+    <ul>
+        <li>Name: Tanvi Borse</li>
+        <li>Enrollment No: NSS2024</li>
+        <li>Unit: NSS Unit 01</li>
+        <li>Year: 2024–25</li>
+    </ul>
+
+    <h2>NSS Activities</h2>
+    <ul>
+        <li>Cleanliness Drive</li>
+        <li>Tree Plantation</li>
+        <li>Blood Donation Camp</li>
+        <li>Road Safety Awareness</li>
+    </ul>
+
+    <!-- TABLE -->
+    <h2>Activity Record</h2>
+    <table>
+        <tr>
+            <th>Activity</th>
+            <th>Date</th>
+            <th>Hours</th>
+        </tr>
+        <tr>
+            <td>Cleanliness Drive</td>
+            <td>12-08-2024</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Tree Plantation</td>
+            <td>15-09-2024</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Blood Donation Camp</td>
+            <td>02-10-2024</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <!-- FUNCTIONAL BUTTON -->
+    <h2>Volunteer Feedback</h2>
+    <input type="text" id="feedback" placeholder="Enter your feedback">
+    <br>
+    <button onclick="submitFeedback()">Submit</button>
+
+</div>
+
+<!-- SIMPLE JAVASCRIPT -->
+<script>
+    function submitFeedback() {
+        alert("Thank you for your valuable NSS feedback!");
+    }
+</script>
+
+</body>
+</html>
+ 

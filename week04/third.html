@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Result Calculator</title>
+
+<style>
+body{
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.container{
+    background: white;
+    width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    color: #333;
+}
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover{
+    background-color: #3d8b40;
+}
+.result{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Result Calculator</h2>
+
+<button onclick="calculateResult()">Check Result</button>
+
+<div class="result" id="output"></div>
+
+</div>
+
+<script>
+
+// Class
+class Student{
+    constructor(name, marks){
+        this.name = name;
+        this.marks = marks;
+    }
+
+    getResult(){
+        let total = 0;
+   // Loop
+        for(let i = 0; i < this.marks.length; i++){
+            total += this.marks[i];
+        }
+
+        let average = total / this.marks.length;
+
+        // Condition
+        if(average >= 50){
+            return "Result: PASS<br>Average Marks: " + average.toFixed(2);
+        }
+        else{
+            return "Result: FAIL<br>Average Marks: " + average.toFixed(2);
+        }
+    }
+}
+
+// Function
+function calculateResult(){
+
+    // Object
+    let student1 = new Student("Tanvi",[70,65,80,60]);
+
+    let marksList = student1.marks.join(", ");
+
+    let result = student1.getResult();
+    document.getElementById("output").innerHTML =
+    "<b>Student Name:</b> " + student1.name + "<br><br>" +
+    "<b>Marks:</b> " + marksList + "<br><br>" +
+    result;
+}
+</script>
+</body>
+</html>

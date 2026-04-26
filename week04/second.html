@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Conditions and Loops Example</title>
+
+<style>
+body{
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.container{
+    background: white;
+    width: 380px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+    color: #333;
+}
+
+button{
+    background-color: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #e85a4f;
+}
+
+.result{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Conditions & Loops Example</h2>
+
+<button onclick="showNumbers()">Show Result</button>
+
+<div class="result" id="output"></div>
+</div>
+
+<script>
+
+function showNumbers(){
+
+let number = 6;
+let text = "";
+
+if(number % 2 == 0){
+
+    text += "Even Numbers from 1 to " + number + "<br><br>";
+
+    for(let i = 2; i <= number; i += 2){
+        text += i + "<br>";
+    }
+
+}
+else{
+    text = "Number is Odd";
+}
+
+document.getElementById("output").innerHTML = text;
+
+}
+
+</script>
+
+</body>
+</html>
+
